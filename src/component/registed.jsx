@@ -15,14 +15,18 @@ function Registed({ userList }) {
   }
   return (
     <div>
-      <select value={selectedOption} onChange={handleChange}>
+      <select
+        value={selectedOption}
+        onChange={handleChange}
+        className="text-black"
+      >
         {options.map((data, i) => (
           <option value={data} key={i}>
             {data}
           </option>
         ))}
       </select>
-      <h3>Courses Registered</h3>
+      <h3 className="font-bold">Courses Registered</h3>
       {valueArray.map((val) => (
         <p key={val}>{val}</p>
       ))}

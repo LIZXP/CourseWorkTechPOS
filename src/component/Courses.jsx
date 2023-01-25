@@ -14,7 +14,6 @@ function Courses({ setSelectedCourses, selectedCourses }) {
     "Cloud Computing",
     "Cybersecurity",
   ];
-
   const handleChange = (e) => {
     if (e.target.checked && selectedCourses.length < 4) {
       setSelectedCourses((prev) => [...prev, e.target.value]);

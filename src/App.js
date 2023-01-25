@@ -3,7 +3,7 @@ import Form from "./component/Form";
 
 const App = () => {
   return (
-    <div>
+    <div className="h-screen w-screen m-auto">
       <Form />
     </div>
   );

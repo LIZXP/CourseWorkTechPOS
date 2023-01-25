@@ -8,10 +8,10 @@ const Students = ({ setSelectedStudent }) => {
   };
 
   return (
-    <div>
+    <div className="flex justify-center items-center h-full text-xl">
       {students
         ? students.map((student, i) => (
-            <div key={i}>
+            <div key={i} className="m-10">
               <input
                 type="radio"
                 name="student"
