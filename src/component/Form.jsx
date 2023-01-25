@@ -36,7 +36,7 @@ function Form() {
           />
           <button
             onClick={submitHandler}
-            className="w-20 mt-3 rounded-lg bg-red-300 hover:bg-red-600"
+            className="w-20 mt-3 rounded-lg bg-red-300 hover:bg-red-600 text-black"
           >
             Submit
           </button>
