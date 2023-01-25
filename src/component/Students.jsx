@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
-import { StudentsContext } from "../context/student.context";
+import React from "react";
 
-const Students = () => {
-  const { students } = useContext(StudentsContext);
-  const [selectedStudent, setSelectedStudent] = useState([]);
+const Students = ({ setSelectedStudent }) => {
+  const students = ["Peter", "John", "Amir"];
+
   const handleChange = (e) => {
     setSelectedStudent(e.target.value);
   };
+
   return (
     <div>
       {students

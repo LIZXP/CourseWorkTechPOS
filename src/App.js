@@ -1,12 +1,10 @@
 import React from "react";
-import Student from "./component/Students";
-import Courses from "./component/Courses";
+import Form from "./component/Form";
 
 const App = () => {
   return (
     <div>
-      <Student />
-      <Courses />
+      <Form />
     </div>
   );
 };

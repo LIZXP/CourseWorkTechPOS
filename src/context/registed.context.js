@@ -1,14 +1,16 @@
 import { createContext, useState } from "react";
 
-export const CoursesContext = createContext({
-  courses: [],
-  setCourses: () => {},
+export const RegistedContext = createContext({
+  registed: [],
+  setRegisted: () => {},
 });
 
-export const CoursesProvider = ({ children }) => {
-  const [courses, setCourses] = useState([]);
-  const value = { courses, setCourses };
+export const RegistedProvider = ({ children }) => {
+  const [registed, setRegisted] = useState([]);
+  const value = { registed, setRegisted };
   return (
-    <CoursesContext.Provider value={value}>{children}</CoursesContext.Provider>
+    <RegistedContext.Provider value={value}>
+      {children}
+    </RegistedContext.Provider>
   );
 };

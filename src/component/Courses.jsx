@@ -1,9 +1,20 @@
-import React, { useContext, useState } from "react";
-import { CoursesContext } from "../context/courses.context";
+import React from "react";
 
-function Courses() {
-  const { courses } = useContext(CoursesContext);
-  const [selectedCourses, setSelectedCourses] = useState([]);
+function Courses({ setSelectedCourses, selectedCourses }) {
+  const courses = [
+    "Data Structures and Algorithms",
+    "Machine Learning",
+    "Artificial Intelligence",
+    "Web Development",
+    "Database Systems",
+    "Software Engineering",
+    "Human-Computer Interaction",
+    "Computer Graphics",
+    "Operating Systems",
+    "Cloud Computing",
+    "Cybersecurity",
+  ];
+
   const handleChange = (e) => {
     if (e.target.checked && selectedCourses.length < 4) {
       setSelectedCourses((prev) => [...prev, e.target.value]);
@@ -13,7 +24,6 @@ function Courses() {
       );
     }
   };
-  console.log(selectedCourses);
   return (
     <div>
       {courses
@@ -23,6 +33,7 @@ function Courses() {
                 type="checkbox"
                 name="courses"
                 value={course}
+                defaultChecked={false}
                 onChange={handleChange}
               />
               {course}
